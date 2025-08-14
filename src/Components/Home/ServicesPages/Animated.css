@@ -1,0 +1,9 @@
+.pulsate {
+  animation: pulsate 1s infinite;
+}
+
+@keyframes pulsate {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7);}
+  50% { transform: scale(1.08); box-shadow: 0 0 40px 10px rgba(40, 167, 69, 0.2);}
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7);}
+}
