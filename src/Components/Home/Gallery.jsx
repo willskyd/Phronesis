@@ -106,6 +106,7 @@ const Gallery = () => {
                     </div>
                   ) : null}
                 </div>
+                {/* changes */}
                 <div
                   id="glr3"
                   className="home_div_section4_area_cont2_cont2_div"
