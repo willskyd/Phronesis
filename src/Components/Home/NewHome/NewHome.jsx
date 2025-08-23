@@ -281,90 +281,169 @@ const NewHome = () => {
               </span>
             </div>
             <div className="clients_new_section_area_body">
-              <Swiper
-                slidesPerView={3}
-                spaceBetween={30}
-                effect={"fade"}
-                pagination={{
-                  dynamicBullets: true,
-                  clickable: true,
-                }}
-                breakpoints={{
-                  500: {
-                    slidesPerView: 1,
-                    spaceBetween: 10,
-                  },
-                  // 768: {
-                  //   slidesPerView: 2,
-                  //   spaceBetween: 40,
-                  // },
-                  768: {
-                    slidesPerView: 2,
-                    spaceBetween: 10,
-                  },
-                  1024: {
-                    slidesPerView: 2,
-                    spaceBetween: 10,
-                  },
-                  1200: {
-                    slidesPerView: 3,
-                    spaceBetween: 10,
-                  },
-                  1400: {
-                    slidesPerView: 3,
-                    spaceBetween: 10,
-                  },
-                  1800: {
-                    slidesPerView: 4,
-                    spaceBetween: 10,
-                  },
-                }}
-                loop={true}
-                autoplay={{
-                  delay: 2500,
-                  disableOnInteraction: false,
-                }}
-                modules={[Autoplay, Pagination, Navigation]}
-                navigation={true}
-                // onSlideChange={handleSlideChange}
-                className="home_div_section1_swiper"
-              >
-                {services.map((data) => (
-                  <SwiperSlide className="dash_home_products_swiper_slide">
-                    <a
-                      href={`/services/${data.id}/${data.title}`}
-                      className="home_div_section3_area_2_cont1"
-                      id={data.id}
-                      key={data.id}
-                    >
-                      <div className="home_div_section3_area_2_cont1_img_div">
-                        <img
-                          src={data.img}
-                          alt=""
-                          className="home_div_section3_area_2_cont1_img"
-                        />
-                      </div>
-                      <div className="home_div_section3_area_2_cont1_body">
-                        <div className="home_div_section3_area_2_cont1_title">
-                          {data.title2}
-                        </div>
-                        <div className="home_div_section3_area_2_cont1_para">
-                          {data.paragraph}
-                        </div>
-                        <a
-                          href={`/services/${data.id}/${data.title}`}
-                          className="home_div_section3_area_2_cont1_btn_link"
-                        >
-                          <div className="home_div_section3_area_2_cont1_btn">
-                            <ArrowForwardIcon className="home_div_section3_area_2_cont1_btn_icon" />{" "}
-                            Read more
-                          </div>
-                        </a>
-                      </div>
-                    </a>
-                  </SwiperSlide>
-                ))}
-              </Swiper>
+               <Swiper
+                   slidesPerView={1} // Default to 1 slide for small screens
+                   spaceBetween={10}
+                   pagination={{
+                     dynamicBullets: true,
+                     clickable: true,
+                   }}
+                   breakpoints={{
+                     320: {
+                       slidesPerView: 1,
+                       spaceBetween: 10,
+                     },
+                     640: {
+                       slidesPerView: 2,
+                       spaceBetween: 15,
+                     },
+                     1024: {
+                       slidesPerView: 3,
+                       spaceBetween: 20,
+                     },
+                     1400: {
+                       slidesPerView: 4,
+                       spaceBetween: 20,
+                     },
+                   }}
+                   loop={true}
+                   autoplay={{
+                     delay: 2500,
+                     disableOnInteraction: false,
+                   }}
+                   modules={[Autoplay, Pagination, Navigation]}
+                   navigation={true}
+                   className="w-full max-w-[95vw] mx-auto py-4" // Center and constrain width
+                 >
+                   {[
+                     {
+                       href: '/Electrical/Calibration_Service',
+                       imgSrc: '/img/Electrical Logging and Calibration-min.webp',
+                       title: 'Electrical & Calibration Service',
+                       description: 'Phronesis Oil and Gas Limited offers specialized electrical logging and calibration services, providing...',
+                     },
+                     {
+                       href: '/Oil_&_Gas_Drilling_Services',
+                       imgSrc: '/img/Oil and Gas Drilling Services-min.webp',
+                       title: 'Oil & Gas Drilling Services',
+                       description: 'Phronesis Oil and Gas Limited provides comprehensive oil and gas drilling services, delivering safe, efficient...',
+                     },
+                     {
+                       href: '/Wellhead_Installation_&_Maintainance_Service',
+                       imgSrc: '/img/Wellhead Installation-min.webp',
+                       title: 'Wellhead Installation & Maintenance Service',
+                       description: 'Phronesis Oil and Gas Limited specializes in the installation and maintenance of wellhead systems, delivering...',
+                     },
+                     {
+                       href: '/Hydraulic_Stimulation_CoiledTubing_&_Nitrogen_Services',
+                       imgSrc: '/img/Hydraulic, Stimulation,-min.webp',
+                       title: 'Hydraulic, Stimulation, Coiled Tubing, and Nitrogen Services',
+                       description: 'Phronesis Oil and Gas Limited offers specialized hydraulic, stimulation, coiled tubing, and nitrogen services...',
+                     },
+                     {
+                       href: '/Pumping_Services',
+                       imgSrc: '/img/Pumping Services-min.webp',
+                       title: 'Pumping Services',
+                       description: 'Phronesis Oil and Gas Limited provides specialized pumping services tailored to the needs of the oil and gas industry...',
+                     },
+             
+                      {
+                   href: '/OpenHole_CasedHole_&_SlimHole_Services',
+                   imgSrc: '/img/Open Hole-min.webp',
+                   title: 'Open Hole, Cased Hole, and Slim Hole Services',
+                   description: 'Phronesis Oil and Gas Limited provides specialized open hole, cased hole, and slim hole services...',
+                 },
+                 {
+                   href: '/Bolt_Tensioning_Services',
+                   imgSrc: '/img/Bolt Tensioning Services-min.webp',
+                   title: 'Bolt Tensioning Services',
+                   description: 'Phronesis Oil and Gas Limited provides specialized bolt tensioning services, delivering precise...',
+                 },
+                 {
+                   href: '/Hydraulic_Torqueing_Services',
+                   imgSrc: '/img/Hydraulic Torqueing Services-min.webp',
+                   title: 'Hydraulic Torqueing Services',
+                   description: 'Phronesis Oil and Gas Limited provides specialized hydraulic torquing services, delivering precise...',
+                 },
+                 {
+                   href: '/Casing_Cutting_Services',
+                   imgSrc: '/img/Casing Cutting-min.webp',
+                   title: 'Casing Cutting Services',
+                   description: 'Phronesis Oil and Gas Limited provides specialized casing cutting services, delivering precise and...',
+                 },
+                 {
+                   href: '/ChemicalCold_Explosive_&_Field_Maintenance_Services',
+                   imgSrc: '/img/Chemical Cold-min.webp',
+                   title: 'Chemical Cold, Explosive, and Field Maintenance Services',
+                   description: 'Phronesis Oil and Gas Limited delivers specialized chemical cold, explosive, and field maintenance services...',
+                 },
+                 {
+                   href: '/Rental_of_Drill_Cutting_Skips_Services',
+                   imgSrc: '/img/Rental of Drill Cutting Skips Services-min.webp',
+                   title: 'Rental of Drill Cutting Skips Services',
+                   description: 'Phronesis Oil and Gas Limited offers specialized rental services for drill cutting skips, providing reliable and...',
+                 },
+                 {
+                   href: '/Piping_Line_Welding_Fabrication_Services',
+                   imgSrc: '/img/Piping Line Welding-min.webp',
+                   title: 'Piping Line Welding and Fabrication Services',
+                   description: 'Phronesis Oil and Gas Limited delivers premier piping line welding and fabrication services...',
+                 },
+                 {
+                   href: '/Logistics_Services',
+                   imgSrc: '/img/Logistics Services-min.webp',
+                   title: 'Logistics Services',
+                   description: 'Phronesis Oil and Gas Limited provides comprehensive logistics services tailored to the unique demands...',
+                 },
+                 {
+                   href: '/Location_Preparations_Services',
+                   imgSrc: '/img/Location Preparations Services-min.webp',
+                   title: 'Location Preparations Services',
+                   description: 'Phronesis Oil and Gas Limited provides comprehensive location preparation services, delivering tailored...',
+                 },
+                 {
+                   href: '/Environmental_Consultancy_Services',
+                   imgSrc: '/img/Environmental Consultancy Services-min.webp',
+                   title: 'Environmental Consultancy Services',
+                   description: 'Phronesis Oil and Gas Limited provides expert environmental consultancy services, delivering tailored...',
+                 },
+                 {
+                   href: '/Construction_Services_&_Civil_Works',
+                   imgSrc: '/img/Construction Services-min.webp',
+                   title: 'Construction Services and Civil Works',
+                   description: 'Phronesis Oil & Gas Tek Limited is committed to meeting the increasing demand for responsive, cost-effective...',
+                 },
+                 {
+                   href: '/Civil_&_Mechanical_Engineering_Services',
+                   imgSrc: '/img/Civil and Mechanical-min.webp',
+                   title: 'Civil and Mechanical Engineering Services',
+                   description: 'Phronesis Oil and Gas Limited provides specialized civil and mechanical engineering services, delivering precise...',
+                 },
+               
+                     // Add other services here following the same structure
+                   ].map((service, index) => (
+                     <SwiperSlide key={index} className="flex justify-center items-center py-4">
+                       <a href={service.href} className="block w-full max-w-[28rem] mx-auto">
+                         <div className="border border-[#7c9289] rounded-lg overflow-hidden shadow-lg">
+                           <img
+                             src={service.imgSrc}
+                             alt={service.title}
+                             className=" w-full h-[15rem] object-cover"
+                           />
+                           <div className="p-4 bg-[#1a2e35]">
+                             <p className="text-lg font-extrabold text-white mb-2">{service.title}</p>
+                             <p className="text-sm text-gray-200">
+                               {service.description}{' '}
+                               <a href={service.href} className="text-blue-500 hover:underline">
+                                 read more
+                               </a>
+                             </p>
+                           </div>
+                         </div>
+                       </a>
+                     </SwiperSlide>
+                   ))}
+                 </Swiper>
             </div>
           </div>
         </div>

@@ -124,7 +124,7 @@ class App extends React.Component {
                     />
                     <div className="home_div_section1_fade_bg_img"></div>
                   </div>
-                  <div className="home_div_section1_areab ml-[13rem]">
+                  <div className="home_div_section1_areab md:ml-[13rem]">
                     <div className="home_div_section1_area_div">
                       <div className="home_div_section1_area_div_area1">
                         <div className="home_div_section1_area_div_area1_txt1">
