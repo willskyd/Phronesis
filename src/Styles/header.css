@@ -402,6 +402,24 @@
     border-bottom-right-radius: 20px;
     
   }
+
+  @media (max-width: 640px) {
+    .headerMenuDiv {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin-top: 3.6rem;
+      width: min(90vw, 15rem);
+      height: 21rem;
+      background: #00000094;
+      display: flex;
+      justify-content: flex-end;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      margin-left: auto;
+      margin-right: 0;
+    }
+}
   .headerMenuDiv_cont {
     background: #000;
     width: 100%;
@@ -414,6 +432,7 @@
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
   }
+
   .headerMenuDiv_cont_1 {
     display: flex;
     align-items: center;
