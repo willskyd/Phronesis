@@ -26,6 +26,7 @@ import Location from "./Components/Newscope/Location";
 import Enviroment from "./Components/Newscope/Enviroment";
 import Construction from "./Components/Newscope/Construction";
 import Civil from "./Components/Newscope/Civil";
+import Services from "./Components/Services";
 
 
 
@@ -63,6 +64,9 @@ function App() {
         <Route path="/Environmental_Consultancy_Services" element={<Enviroment />} />
         <Route path="/Construction_Services_&_Civil_Works" element={<Construction />} />
         <Route path="/Civil_&_Mechanical_Engineering_Services" element={<Civil />} />
+        <Route path="/Services" element={<Services />} />
+
+
 
 
       </Routes>

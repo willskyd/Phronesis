@@ -176,13 +176,53 @@ const Header = ({ darkMode, togglemakeDark }) => {
         </div>
       </div>
       {headerMenu ? (
-        <div className="headerMenuDiv">
+        <div className="headerMenuDiv ">
           <div className="headerMenuDiv_cont">
             <CloseIcon
               className="header_div_area_cont3_icon2"
               onClick={ToggleHeaderMenu}
             />
-            {services.map((data) => (
+            <a
+                href="/"
+                className="header_div_area_cont2_linkk1 "
+                onMouseOver={CloseTradeDrop}
+              >
+                Home
+              </a>
+
+              <a
+                href="/Services"
+                className="header_div_area_cont2_linkk1 header_div_area_cont2_link2"
+                onMouseOver={CloseTradeDrop}
+              >
+                Services
+              </a>
+
+
+            <a
+                href="/scope?=new-page"
+                className="header_div_area_cont2_linkk1"
+                onMouseOver={CloseTradeDrop}
+              >
+                Scope
+              </a>
+
+              <a
+                href="/about"
+                className="header_div_area_cont2_linkk1 header_div_area_cont2_link2"
+                onMouseOver={CloseTradeDrop}
+              >
+                About Us
+              </a>
+              <a
+                href="/gallery"
+                className="header_div_area_cont2_linkk1 header_div_area_cont2_link2"
+                target="_blank"
+                onMouseOver={CloseTradeDrop}
+              >
+                Gallery
+              </a>
+            {/* {services.map((data) => (
               <a
                 href={`/services/${data.id}/${data.title}`}
                 className="headerMenuDiv_cont_1"
@@ -197,7 +237,7 @@ const Header = ({ darkMode, togglemakeDark }) => {
                   <KeyboardArrowRightIcon className="headerMenuDiv_cont_1_icon_icon" />{" "}
                 </span>
               </a>
-            ))}
+            ))} */}
             <a href="/#contact" style={{ width: "100%" }}>
               <button className="headerMenuDiv_cont_1_btn">Contact Us</button>
             </a>
