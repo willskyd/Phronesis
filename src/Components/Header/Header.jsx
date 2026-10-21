@@ -1,19 +1,13 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../../Styles/header.css";
-import Brightness7Icon from "@mui/icons-material/Brightness7";
-import NightsStayIcon from "@mui/icons-material/NightsStay";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
-import KeyboardArrowRightIcon from "@mui/icons-material/KeyboardArrowRight";
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import SettingsIcon from "@mui/icons-material/Settings";
 import services from "../Static";
-import NorthEastIcon from "@mui/icons-material/NorthEast";
 import { motion } from "framer-motion";
 import { fadeIn } from "../../utils/variants";
-import { transition, transition2 } from "../../utils/transition";
+import { transition2 } from "../../utils/transition";
 
 const Header = ({ darkMode, togglemakeDark }) => {
   const [tradeDrop, setTradeDrop] = useState(false);
@@ -72,15 +66,16 @@ const Header = ({ darkMode, togglemakeDark }) => {
     },
   ];
 
-  const handleScroll = () => {
-    if (window.scrollY >= 100) {
-      setFixed(true);
-    } else {
-      setFixed(false);
-    }
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      setFixed(window.scrollY >= 100);
+    };
 
-  window.addEventListener("scroll", handleScroll);
+    handleScroll();
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <div
@@ -124,6 +119,7 @@ const Header = ({ darkMode, togglemakeDark }) => {
                   >
                     {services.map((data) => (
                       <a
+                        key={data.id}
                         href={`/services/${data.id}/${data.title}`}
                         className="header_div_area_cont2_link1_drop_div_cont1"
                       >

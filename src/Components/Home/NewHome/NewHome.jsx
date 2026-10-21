@@ -9,8 +9,6 @@ import "swiper/css/effect-fade";
 import "swiper/swiper-bundle.css";
 import "swiper/css/navigation";
 import { Pagination, EffectFade, Autoplay, Navigation } from "swiper/modules";
-import services from "../../Static";
-import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 const NewHome = () => {
   return (

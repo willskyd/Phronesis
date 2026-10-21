@@ -2,7 +2,7 @@ import React from "react";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { motion } from "framer-motion";
 import { transition } from "../../utils/transition";
-import { fadeIn, reveal } from "../../utils/variants";
+import { fadeIn } from "../../utils/variants";
 const About = () => {
   return (
     <div className="servicePageDiv">

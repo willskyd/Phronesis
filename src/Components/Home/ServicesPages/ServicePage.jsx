@@ -1,13 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "./servicePage.css";
-import "../NewHome/newhome.css"
+import "../NewHome/newhome.css";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
-import Slider from "react-slick";
 import services from "../../Static";
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import { transition } from "../../../utils/transition";
-import { fadeIn, reveal } from "../../../utils/variants";
+import { fadeIn } from "../../../utils/variants";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";

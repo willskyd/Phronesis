@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "../../Styles/home.css";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -6,7 +6,6 @@ import Marquee from "react-fast-marquee";
 import "slick-carousel/slick/slick.css";
 import { motion } from "framer-motion";
 import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
 import services from "../Static";
 import "swiper/css";
 import "swiper/css/pagination";
