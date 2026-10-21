@@ -8,7 +8,7 @@ import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 import "swiper/swiper-bundle.css";
 import "swiper/css/navigation";
-import { Pagination, EffectFade, Autoplay, Navigation } from "swiper/modules";
+import { Pagination, Autoplay, Navigation } from "swiper/modules";
 
 const NewHome = () => {
   return (

@@ -24,48 +24,6 @@ const Header = ({ darkMode, togglemakeDark }) => {
     setHeaderMenu(!headerMenu);
   };
 
-  const serviceTitle = [
-    {
-      title: "ENVIRONMENTAL AND WASTE MANAGEMENT",
-    },
-    {
-      title: "ENHANCED SPENT TREATMENT",
-    },
-    {
-      title: " WASTE EQUIPMENT LEASING, SALE AND SUPPLY",
-    },
-    {
-      title: " WASTE TRANSPORTATION",
-    },
-    {
-      title: " EQUIPMENT LEASING PROCUREMENT",
-    },
-    {
-      title: "OIL & GAS DRILLING",
-    },
-    {
-      title: "FIELD MAINTENANCE",
-    },
-    {
-      title: "RENTAL OF DRILL CUTTINGS SKIPS",
-    },
-    {
-      title: "ENVIRONMENTAL CONSULTANCY",
-    },
-    {
-      title: "CIVIL & MECHANICAL ENGINEERING",
-    },
-    {
-      title: "ENGINEERING OVERVIEW",
-    },
-    {
-      title: "CONSTRUCTION & CIVIL WORKS",
-    },
-    {
-      title: "MECHANICAL FABRICATION",
-    },
-  ];
-
   useEffect(() => {
     const handleScroll = () => {
       setFixed(window.scrollY >= 100);

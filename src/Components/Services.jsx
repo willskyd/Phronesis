@@ -2,7 +2,6 @@
 
 import React from 'react';
 import SettingsIcon from "@mui/icons-material/Settings";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import services from "./Static";
 
 

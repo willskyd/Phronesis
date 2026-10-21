@@ -7,7 +7,7 @@ import Gallery from "./Components/Home/Gallery";
 import About from "./Components/Home/About";
 import NewHome from "./Components/Home/NewHome/NewHome";
 import Scope from "./Components/Home/Scope/Scope";
-import Eletric_cal from "./Components/Newscope/Eletric_cal";
+import ElectricalCalibration from "./Components/Newscope/Eletric_cal";
 import Oilgas from "./Components/Newscope/Oilgas";
 import Wellinstall from "./Components/Newscope/Wellinstall";
 import Hydraulic from "./Components/Newscope/Hydraulic";
@@ -45,7 +45,7 @@ function App() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/scope" element={<Scope />} />
         <Route path="/services/:id/:title" element={<ServicePage />} />
-        <Route path="/Electrical/Calibration_Service" element={<Eletric_cal />} />
+        <Route path="/Electrical/Calibration_Service" element={<ElectricalCalibration />} />
         <Route path="/Oil_&_Gas_Drilling_Services" element={<Oilgas />} />
         <Route path="/Wellhead_Installation_&_Maintainance_Service" element={<Wellinstall/>} />
         <Route path="/Hydraulic_Stimulation_CoiledTubing_&_Nitrogen_Services" element={<Hydraulic />} />

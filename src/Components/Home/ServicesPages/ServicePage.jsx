@@ -13,7 +13,7 @@ import "swiper/css/pagination";
 import "swiper/css/effect-fade";
 import "swiper/swiper-bundle.css";
 import "swiper/css/navigation";
-import { Pagination, EffectFade, Autoplay, Navigation } from "swiper/modules";
+import { Pagination, Autoplay, Navigation } from "swiper/modules";
 
 const ServicePage = () => {
   const [payload, setPayload] = useState(null);
@@ -23,41 +23,6 @@ const ServicePage = () => {
   console.log(id);
   console.log(title);
   console.log("====================================");
-  var settings = {
-    dots: true,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 5,
-    initialSlide: 0,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          infinite: true,
-          dots: true,
-        },
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
-    ],
-  };
-
   const pageid = id; // Replace this with your actual pageid
 
   useEffect(() => {
